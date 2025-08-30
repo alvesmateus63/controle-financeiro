@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.alvesmateus.controleFinanceiro.security.auth.dtos.AuthRequest;
-import br.com.alvesmateus.controleFinanceiro.security.auth.dtos.AuthResponse;
-import br.com.alvesmateus.controleFinanceiro.security.auth.dtos.RegisterRequest;
+import br.com.alvesmateus.controleFinanceiro.security.auth.dto.AuthRequest;
+import br.com.alvesmateus.controleFinanceiro.security.auth.dto.AuthResponse;
+import br.com.alvesmateus.controleFinanceiro.security.auth.dto.RegisterRequest;
 import br.com.alvesmateus.controleFinanceiro.security.jwt.JwtService;
 import br.com.alvesmateus.controleFinanceiro.user.User;
 import br.com.alvesmateus.controleFinanceiro.user.UserRepository;
