@@ -1,7 +1,5 @@
 package br.com.alvesmateus.controleFinanceiro.user;
 
-import java.util.UUID;
-
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +20,7 @@ public class UserService {
             .orElseThrow();
     }
 
-    private UserResponse toResponseDTO(User user) {
+    public UserResponse toResponseDTO(User user) {
         return new UserResponse(
             user.getId(), 
             user.getName(), 

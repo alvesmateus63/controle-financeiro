@@ -8,6 +8,8 @@ import lombok.Setter;
 
 import java.util.UUID;
 
+import br.com.alvesmateus.controleFinanceiro.user.User;
+
 @Entity
 @Getter
 @Setter
@@ -18,7 +20,9 @@ public class BankAccount {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    private UUID idUser;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     private String name;
 
