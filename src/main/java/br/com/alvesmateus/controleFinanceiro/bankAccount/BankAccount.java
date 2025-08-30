@@ -15,6 +15,7 @@ import br.com.alvesmateus.controleFinanceiro.user.User;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "tb_bank_accounts")
 public class BankAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

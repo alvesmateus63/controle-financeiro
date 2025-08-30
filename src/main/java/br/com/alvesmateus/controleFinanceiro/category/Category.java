@@ -4,18 +4,22 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.UUID;
+import br.com.alvesmateus.controleFinanceiro.user.User;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "tb_categories")
 public class Category {
 
     @Id
@@ -24,5 +28,7 @@ public class Category {
 
     private String name;
 
-    private UUID idUser;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }
